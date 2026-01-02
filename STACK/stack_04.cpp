@@ -2,7 +2,6 @@
 #include <vector>
 #include <list>
 
-
 int main()
 {
 	std::stack<int> st1;
