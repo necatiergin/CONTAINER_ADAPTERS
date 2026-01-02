@@ -24,6 +24,13 @@ public:
 		c.push_back(std::move(x))
 		push_heap(c.begin(), c.end(), comp);
 	}
+
+	template <typename ...Args>
+	void emplace(Args&& ...args)
+	{
+		c.emplace_back(std::forward<Args>(args)...);
+		push_heap(c.begin(), c.end(), comp);
+	}
 	
 	void pop()
 	{
